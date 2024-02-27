@@ -1,3 +1,4 @@
+require('dotenv').config();
 const initMondayClient = require('monday-sdk-js');
 const token = process.env.TOKEN;
 
@@ -82,7 +83,5 @@ function findItemsWithMatchingTextValues(items) {
 }
 
 module.exports = {
-  getColumnValue,
-  changeColumnValue,
   moveDuplicateItems
 };

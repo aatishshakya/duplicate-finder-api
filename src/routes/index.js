@@ -1,9 +1,6 @@
 const router = require('express').Router();
-const mondayRoutes = require('./monday');
 const { moveDuplicateItems } = require('../services/monday-service');
 const Board = require('../models/BoardModel');
-
-router.use(mondayRoutes);
 
 router.post('/', async (req, res) => {
   const event = req.body.event;
